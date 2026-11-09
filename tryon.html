@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Безопасность: MediaPipe (jsDelivr + модели Google) разрешены только для примерки; см. SECURITY.md -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file: 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob: mediastream:; connect-src 'self' https://cdn.jsdelivr.net https://storage.googleapis.com; worker-src 'self' blob:; form-action 'none'; base-uri 'none'; object-src 'none'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file: 'unsafe-inline' https://cdn.tailwindcss.com/3.4.17 'wasm-unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self' blob: mediastream:; connect-src 'self' https://cdn.jsdelivr.net https://storage.googleapis.com; worker-src 'self' blob:; form-action 'none'; base-uri 'none'; object-src 'none'" />
   <meta name="referrer" content="no-referrer" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>MONTE — Виртуальная примерка</title>
@@ -14,6 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <script src="vendor/tailwindcss-3.4.17.js"></script>
+  <!-- Запасной вариант: если папку vendor не загрузили на хостинг, берём ту же версию с официального CDN -->
+  <script>window.tailwind || document.write('<script src="https://cdn.tailwindcss.com/3.4.17"><\/script>')</script>
   <script>
     tailwind.config = {
       theme: {

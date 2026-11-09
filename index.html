@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Безопасность: разрешаем загрузку только из перечисленных источников (см. SECURITY.md) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file: 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://images.unsplash.com; connect-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file: 'unsafe-inline' https://cdn.tailwindcss.com/3.4.17; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https://images.unsplash.com; connect-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MONTE — Quiet Essentials</title>
@@ -17,6 +17,8 @@
   <!-- Tailwind CSS -->
   <!-- Локальная копия Tailwind Play CDN 3.4.17 (без зависимости от чужого сервера) -->
   <script src="vendor/tailwindcss-3.4.17.js"></script>
+  <!-- Запасной вариант: если папку vendor не загрузили на хостинг, берём ту же версию с официального CDN -->
+  <script>window.tailwind || document.write('<script src="https://cdn.tailwindcss.com/3.4.17"><\/script>')</script>
   <script>
     tailwind.config = {
       theme: {
